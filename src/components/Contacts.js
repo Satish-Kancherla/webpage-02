@@ -1,9 +1,27 @@
-import contact from "./images/contact.jpg";
+import {useState} from 'react';
+import axios from "axios";
+
 const Contacts = () => {
+
+    const [content,setContent] = useState({name:"",email:"",phone:"",comment:" "})
+
+    const handleChange =(e)=>{
+        setContent({...content,[e.target.name]:[e.target.value]});
+    }
+
+    const handleSubmit =(e)=>{
+        e.preventDefault();  
+        axios.post('http://localhost:8081/test',content)
+        .then(res => console.log("registered successfully"))
+        .catch(err => console.log(err));
+        setContent({name:"",email:"",phone:"",comment:" "})
+    }    
+
+
     return ( 
         <div className="container-contacts">
             <div className="cont-1">
-                <img src={contact} alt=""/>
+                
                 <h1>Contact Us</h1>
             </div>
             <div className="cont-2">
@@ -15,16 +33,16 @@ const Contacts = () => {
                     <p>Cyber Towers,1 rd Floor,Street No-1, Hi-Tech city, Madhapur, Hyderabad, Telangana 500081 INDIA</p>
                     <br/>
                     <h4>E-mails</h4>
-                    <p>Careers: jobs@data.com<br/> Services: services@data.com<br/> Products: products@data.com<br/> Solutions: solutions@data.com<br/> General:   info@data.com</p>
+                    <p>Careers: jobs@hyderabad.com<br/> Services: services@hyderabad.com<br/> Products: products@hyderabad.com<br/> Solutions: solutions@hyderabad.com<br/> General:   info@hyderabad.com</p>
                 </div>
                 <div className="cont-2b">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                     <h2>Request for a Service</h2>
                         <table>
-                        <tr><input type="text" placeholder="Name"/></tr>
-                        <tr><input type="email" placeholder="Email"/></tr>
-                        <tr><input type="number"placeholder="Phone"/></tr>
-                        <textarea rows={4} cols={40} placeholder="Type your message here..."/><br/>
+                        <tr><input type="text" placeholder="Name" name='name' value={content.name} onChange={handleChange} /></tr>
+                        <tr><input type="email"  placeholder="Email" name='email' value={content.email} onChange={handleChange} /></tr>
+                        <tr><input type="number"  placeholder="Phone" name='phone' value={content.phone} onChange={handleChange} /></tr>
+                        <textarea rows={4} cols={40} placeholder="Type your message here..." name='comment' value={content.comment} onChange={handleChange} /><br/>
                         <button>Submit</button>
                         </table>
                     </form>
@@ -36,7 +54,7 @@ const Contacts = () => {
                         <h1>Join Us Today</h1>
                     </div>
                     <div className="cont-5a">
-                      <input type="text" placeholder="Enter your email here"/><button>Join</button>
+                      <input type="text" placeholder="Enter your email here" name='email'  value={content.email} onChange={handleChange} /><button onClick={handleSubmit}>Join</button>
                     </div>
                 </div>
                 <div className="map">
@@ -46,13 +64,13 @@ const Contacts = () => {
                 <div className="add">
                     
                 <div className="add-1">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <table >
                         <h2>Request for a Service</h2>
-                        <tr><input type="text" placeholder="Name"/></tr>
-                        <tr><input type="email" placeholder="Email"/></tr>
-                        <tr><input type="number"placeholder="Phone"/></tr>
-                        <textarea rows={4} cols={40} placeholder="Type your message here..."/><br/>
+                        <tr><input type="text"  placeholder="Name" name='name' value={content.name} onChange={handleChange}/></tr>
+                        <tr><input type="email" placeholder="Email" name='email' value={content.email} onChange={handleChange}/></tr>
+                        <tr><input type="number"placeholder="Phone" name='phone' value={content.phone} onChange={handleChange}/></tr>
+                        <textarea rows={4} cols={40} placeholder="Type your message here..." name='comment' value={content.comment} onChange={handleChange}/><br/>
                         <button>Submit</button>
                         </table>
                     </form>
@@ -66,7 +84,7 @@ const Contacts = () => {
                     <p>Cyber Towers,1 rd Floor,Street No-1, Hi-Tech city,<br/> Madhapur, Hyderabad, Telangana 500081 INDIA<br/> Tel.040-40068214</p>
                     <br/>
                     <h4>E-mails</h4>
-                    <p>Careers: jobs@data.com<br/> Services: services@data.com<br/> Products: products@data.com<br/> Solutions: solutions@data.com<br/> General:   info@data.com</p>
+                    <p>Careers: jobs@hyderabad.com<br/> Services: services@hyderabad.com<br/> Products: products@hyderabad.com<br/> Solutions: solutions@hyderabad.com<br/> General:   info@hyderabad.com</p>
                     </div>
             </div>
             </div>

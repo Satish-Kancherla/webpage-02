@@ -12,38 +12,91 @@ import v3 from "./video/v3.mp4";
 const Home = () => {
     return ( 
         <div className="container-main">
-            <div className="main">
-                <video  src={v3} autoPlay loop muted  />  
-                <h1> Welcome </h1>
+            <div className="home-video1">
+                <div className="main">
+                    <video  src={v3} autoPlay loop muted  />  
+                </div>
             </div>
             
             <div className="pub">
                 <h1>What We Do</h1>
             </div>
-            <div className="images">
+            <div className="images-a">
                 <div className="img1">
-                <img src={big} alt=""/>
-                <div className="img1-p">
-                <p>Block Chain Development</p> 
-                <p>the is first image</p>
-                </div>
+                    <img src={big} alt=""/>
+                    <h2>Block Chain Development</h2>
+                    <div className="img1-p">
+                        <div className="p-1">
+                            <p>Block Chain Development</p> 
+                        </div>
+                        <div className="p-2">
+                            <p>Increases the security and speeds up the exchange of information.</p>
+                        </div> 
+                    </div>
                 </div>
                 <div className="img2">
-                <img src={block} alt=""/>
+                    <img src={block} alt=""/>
+                    <h2>Big Data Analytics</h2>
+                    <div className="img2-p">
+                        
+                        <div className="p-1">
+                            <p>Big Data Analytics</p> 
+                        </div>
+                        <div className="p-2">
+                            <p>Unleash the hidden patterns, unknown correlations, market trends, customer preferences, and other useful information.</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="img3">
-                <img src={mobile} alt=""/>
+                    <img src={mobile} alt=""/>
+                    <h2>Mobile App Development</h2>
+                    <div className="img3-p">
+                        
+                        <div className="p-1">
+                            <p>Mobile App Development</p> 
+                        </div>
+                        <div className="p-2">
+                            <p>Get mobile apps across all the major platforms, including iOS (iPhone & iPad), Android, BlackBerry and Windows Mobile.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className='images'>
-                <div className="img4">
-                <img src={ab} alt=""/>
+            <div className='images-b'>
+            <div className="img4">
+                    <img src={ab} alt=""/>
+                    <h2>ERP Solutions</h2>
+                    <div className="img4-p">
+                        <div className="p-1">
+                            <p>ERP Solutions</p> 
+                        </div>
+                        <div className="p-2">
+                            <p>Integrated management of main business processes, often in real time and mediated by software and technology.</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="img5">
-                <img src={abc} alt=""/>
+                    <img src={abcde} alt=""/>
+                    <h2>Web Development & SEO</h2>
+                    <div className="img5-p">
+                        <div className="p-1">
+                            <p>Web Development & SEO</p> 
+                        </div>
+                        <div className="p-2">
+                            <p>Hyderabad Group offers a broad confluence of web development solutions that caters to both complex and simple business requirements.</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="img6">
-                <img src={abcd} alt=""/>
+                    <img src={abcd} alt=""/>
+                    <h2>IT Consulting</h2>
+                    <div className="img6-p">
+                        <div className="p-1">
+                            <p>IT Consulting</p> 
+                        </div>
+                        <div className="p-2">
+                            <p>Integrate new hardware, packaged and custom software, communications protocols and networks into your existing technology infrastructure.</p>
+                        </div>
+                    </div>
                 </div>
                 
                 
@@ -97,7 +150,7 @@ const Home = () => {
                 <div className="para">
                     <h1>ABOUT</h1>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s.</p>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text. </p>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.  </p>
 
                 </div>
                 <div className="video4">
